@@ -1,22 +1,22 @@
-import { Ul, NavItem } from './styles'
+import * as S from './styles'
 
 const Nav = () => {
   return (
     <nav>
-      <Ul>
-        <NavItem>
+      <S.Ul>
+        <S.NavItem>
           <a href="#home">Início</a>
-        </NavItem>
-        <NavItem>
+        </S.NavItem>
+        <S.NavItem>
           <a href="#sobre">Sobre</a>
-        </NavItem>
-        <NavItem>
+        </S.NavItem>
+        <S.NavItem>
           <a href="#servicos">Projetos</a>
-        </NavItem>
-        <NavItem>
+        </S.NavItem>
+        <S.NavItem>
           <a href="#contato">Contato</a>
-        </NavItem>
-      </Ul>
+        </S.NavItem>
+      </S.Ul>
     </nav>
   )
 }

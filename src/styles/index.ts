@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -6,20 +6,18 @@ export const GlobalStyle = createGlobalStyle`
     padding:0;
   }
 
-
-
   body{
     font-family: "Montserrat", sans-serif;
     background-color: #0c0c0c;
   }
 
-  .container{
-    width: 100%;
-    max-width:1024px;
-    margin: 0 auto;
-  }
-
   a{
     text-decoration:none;
   }
+`
+
+export const Container = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 `
