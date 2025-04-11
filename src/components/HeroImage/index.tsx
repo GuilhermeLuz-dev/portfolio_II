@@ -1,5 +1,9 @@
-import { Img } from './styles'
+import { ImgContainer } from './styles'
 
-const HeroImage = () => <Img src="../../../public/assets/images/imageHero.png" />
+const HeroImage = () => (
+  <ImgContainer>
+    <img src="/assets/images/portfolio_II_image.png" alt="" />
+  </ImgContainer>
+)
 
 export default HeroImage
