@@ -1,5 +1,12 @@
 import styled from 'styled-components'
 
+export const TextContainer = styled.div`
+  order: 0;
+  @media (max-width: 768px) {
+    order: 1;
+  }
+`
+
 export const Title = styled.p`
   color: #fff;
   font-size: 40px;
@@ -17,4 +24,10 @@ export const HighlightedText = styled.span`
 export const Subtitle = styled.p`
   color: #fff;
   font-size: 20px;
+`
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
 `

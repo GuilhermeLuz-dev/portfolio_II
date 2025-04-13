@@ -1,15 +1,14 @@
-import { SectionHero } from './styles'
+import * as S from './styles'
 import HeroText from '../../components/HeroText'
 import HeroImage from '../../components/HeroImage'
-import { Container } from '../../styles'
 
 const Hero = () => (
-  <Container>
-    <SectionHero>
+  <S.SectionHero>
+    <S.ContainerHero>
       <HeroText />
       <HeroImage />
-    </SectionHero>
-  </Container>
+    </S.ContainerHero>
+  </S.SectionHero>
 )
 
 export default Hero

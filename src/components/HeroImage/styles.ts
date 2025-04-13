@@ -2,10 +2,16 @@ import styled from 'styled-components'
 
 export const ImgContainer = styled.div`
   display: flex;
-  justify-content: center;
+  order: 1;
+  justify-content: end;
 
   img {
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
+  }
+  @media (max-width: 768px) {
+    order: 0;
+    max-width: 300px;
+    margin: 24px;
   }
 `

@@ -2,7 +2,7 @@ import { ImgContainer } from './styles'
 
 const HeroImage = () => (
   <ImgContainer>
-    <img src="/assets/images/portfolio_II_image.png" alt="" />
+    <img src="/assets/images/imageForHero.png" alt="" />
   </ImgContainer>
 )
 
