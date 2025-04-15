@@ -8,4 +8,6 @@ export const SectionProjects = styled.section`
 
 export const ContainerProjects = styled(Container)`
   displat: flex;
+  justify-content: center;
+  align-items: center;
 `
