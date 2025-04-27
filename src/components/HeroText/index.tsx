@@ -1,6 +1,4 @@
-import { Github, Linkedin, Download } from 'lucide-react'
-
-import Button from '../Button'
+import Icon from '../Icon'
 import * as S from './styles'
 
 const HeroText = () => (
@@ -10,18 +8,18 @@ const HeroText = () => (
     </S.Title>
     <S.Subtitle>Transformando ideias em interfaces incríveis.</S.Subtitle>
     <S.ButtonContainer>
-      <Button size="medium" color="greenGradient">
-        <Download size={20} />
+      <S.ButtonHero background="GreenGradient">
+        <Icon name="downloadingIcon" size={16} />
         Baixar CV
-      </Button>
-      <Button size="medium" color="pinkGradient">
-        <Github size={20} />
+      </S.ButtonHero>
+      <S.ButtonHero background="PinkGradient">
+        <Icon name="githubIcon" size={16} />
         GitHub
-      </Button>
-      <Button size="medium" color="blueGradient">
-        <Linkedin size={20} />
+      </S.ButtonHero>
+      <S.ButtonHero background="BlueGradient">
+        <Icon name="linkedinIcon" size={16} />
         Likedin
-      </Button>
+      </S.ButtonHero>
     </S.ButtonContainer>
   </S.TextContainer>
 )

@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+import { ButtonStyled } from '../Button/styles'
+
+type Props = {
+  background?: string
+}
 export const TextContainer = styled.div`
   order: 0;
   @media (max-width: 768px) {
@@ -29,5 +34,10 @@ export const Subtitle = styled.p`
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 1%;
   margin-top: 64px;
+`
+export const ButtonHero = styled(ButtonStyled)<Props>`
+  width: 32.66%;
+  background: ${(props) => props.theme.colors[props.background || 'blue']};
 `

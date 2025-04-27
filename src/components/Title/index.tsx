@@ -4,7 +4,7 @@ type TitleProps = {
   children: React.ReactNode
   size?: 'small' | 'medium' | 'large'
   weight?: 'normal' | 'bold'
-  color?: 'pinkGradient' | 'blueGradient' | 'greenGradient'
+  color?: 'pinkGradient' | 'blueGradient' | 'greenGradient' | 'pinkPorpleGradient'
   center?: boolean
 }
 
