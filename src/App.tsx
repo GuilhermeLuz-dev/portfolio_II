@@ -5,6 +5,7 @@ import { darkTheme } from './Themes/dark'
 import Header from './components/Header'
 import Hero from './containers/Hero'
 import Projects from './containers/Projects'
+import About from './containers/About'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Hero />
       <Projects />
+      <About />
     </ThemeProvider>
   )
 }

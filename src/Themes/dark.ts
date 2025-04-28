@@ -9,6 +9,7 @@ export const darkTheme = {
     GreenGradient: 'linear-gradient(90deg,#01b865 34.5%, #6BD1FF 100%)',
     PinkColor: '#D9059F',
     PurpleColor: '#7E13F8',
+    GreenColor: '#9CD33B',
   },
   sizes,
   icons,
