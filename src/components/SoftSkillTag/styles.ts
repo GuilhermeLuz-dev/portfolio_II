@@ -8,6 +8,6 @@ export const TagStyled = styled.div<Props>`
   font-size: 14px;
   font-weight: bold;
   border-radius: 10px;
-  background-color: ${(props) => (props.color ? props.theme.colors[props.color] : '#00f')};
+  background: ${(props) => (props.color ? props.theme.colors[props.color] : '#00f')};
   color: #fff;
 `

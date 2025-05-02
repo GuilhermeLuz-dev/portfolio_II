@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import { Container } from '../../styles'
 
+type Props = {
+  gap?: number
+}
+
 export const AboutStyled = styled.section`
   margin-top: 30px;
   margin-bottom: 30px;
@@ -33,9 +37,9 @@ export const StackAndSkillsContainer = styled.div`
   border-radius: 5px;
 `
 
-export const TagsContainer = styled.div`
-  margin-top: 16px;
+export const SkillsContent = styled.div<Props>`
   display: flex;
-  gap: 8px;
+  gap: ${(props) => (props.gap ? props.gap : 8)}px;
   flex-wrap: wrap;
+  margin-top: 16px;
 `

@@ -8,15 +8,15 @@ const HeroText = () => (
     </S.Title>
     <S.Subtitle>Transformando ideias em interfaces incríveis.</S.Subtitle>
     <S.ButtonContainer>
-      <S.ButtonHero background="GreenGradient">
+      <S.ButtonHero background="greenGradient">
         <Icon name="downloadingIcon" size={16} />
         Baixar CV
       </S.ButtonHero>
-      <S.ButtonHero background="PinkGradient">
+      <S.ButtonHero background="pinkGradient">
         <Icon name="githubIcon" size={16} />
         GitHub
       </S.ButtonHero>
-      <S.ButtonHero background="BlueGradient">
+      <S.ButtonHero background="blueGradient">
         <Icon name="linkedinIcon" size={16} />
         Likedin
       </S.ButtonHero>

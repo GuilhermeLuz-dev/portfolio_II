@@ -8,16 +8,16 @@ const Caroussel = () => (
       <S.CarrousselImage src="/assets/images/456498.jpg" alt="Imagem do projeto" />
     </S.ImageContainer>
     <S.CarrousselInfo>
-      <S.TitleCarrousel size="small" weight="bold" color="pinkPorpleGradient" center={false}>
+      <S.TitleCarrousel size="small" weight="bold" color="pinkPurpleGradient" center={false}>
         Titulo do projeto
       </S.TitleCarrousel>
       <S.P>Descrição do projeto</S.P>
       <S.ButtonContainer>
-        <S.ButtonProject background="PinkColor">
+        <S.ButtonProject background="pinkColor">
           <Icon name="githubIcon" size={16} />
           Build
         </S.ButtonProject>
-        <S.ButtonProject background="PurpleColor">
+        <S.ButtonProject background="purpleColor">
           <Icon name="globeIcon" size={16} />
           Repositorio
         </S.ButtonProject>

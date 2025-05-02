@@ -1,5 +1,6 @@
 import SoftSkillTag from '../../components/SoftSkillTag'
 import Title from '../../components/Title'
+import Icon from '../../components/Icon'
 
 import * as S from './styles'
 
@@ -25,23 +26,25 @@ const About = () => (
           <Title color="greenGradient" size="small">
             Soft Skills:
           </Title>
-          <S.TagsContainer>
-            <SoftSkillTag color="PinkColor">Liderança</SoftSkillTag>
+          <S.SkillsContent>
+            <SoftSkillTag color="pinkColor">Liderança</SoftSkillTag>
             <SoftSkillTag>Curiosidade</SoftSkillTag>
-            <SoftSkillTag color="GreenColor">Intraempreendedor</SoftSkillTag>
-            <SoftSkillTag color="PurpleColor">Intraempreendedor</SoftSkillTag>
-            <SoftSkillTag color="PinkColor">Autodidata</SoftSkillTag>
-          </S.TagsContainer>
+            <SoftSkillTag color="greenColor">Intraempreendedor</SoftSkillTag>
+            <SoftSkillTag color="lightGreenColor">Intraempreendedor</SoftSkillTag>
+            <SoftSkillTag color="orangeColor">Autodidata</SoftSkillTag>
+          </S.SkillsContent>
         </S.StackAndSkillsContainer>
         <S.StackAndSkillsContainer>
           <Title color="greenGradient" size="small">
             Tecnologias:
           </Title>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo porro ratione quidem vero
-            veniam adipisci, laudantium deserunt est voluptatum iure, laborum nostrum ipsam debitis
-            cupiditate facilis, mollitia animi quia fuga.
-          </p>
+          <S.SkillsContent gap={16}>
+            <Icon name="jsIcon" size={32} />
+            <Icon name="htmlIcon" size={32} />
+            <Icon name="css3Icon" size={32} />
+            <Icon name="reactIcon" size={32} />
+            <Icon name="typescriptIcon" size={32} />
+          </S.SkillsContent>
         </S.StackAndSkillsContainer>
       </S.SkillsContainer>
     </S.AboutContainer>

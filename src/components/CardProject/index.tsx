@@ -13,16 +13,16 @@ const CardProject = ({ title, description, image, techs }: CardProjectProps) => 
   <S.CardStyled>
     <S.CardImage src={image} />
     <S.InfosContainer>
-      <Title color="pinkPorpleGradient" size="small" weight="bold">
+      <Title color="pinkPurpleGradient" size="small" weight="bold">
         {title}
       </Title>
       <S.Description>{description}</S.Description>
       <S.ButtonsContainer>
-        <S.CardButton background="PinkGradient">
+        <S.CardButton background="pinkGradient">
           <Icon name="githubIcon" size={16} />
           Repositório
         </S.CardButton>
-        <S.CardButton background="BlueGradient">
+        <S.CardButton background="blueGradient">
           <Icon name="globeIcon" size={16} />
           Site
         </S.CardButton>

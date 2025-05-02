@@ -6,6 +6,8 @@ import Header from './components/Header'
 import Hero from './containers/Hero'
 import Projects from './containers/Projects'
 import About from './containers/About'
+import Contacts from './containers/Contacts'
+import Footer from './containers/Footer'
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Hero />
       <Projects />
       <About />
+      <Contacts />
+      <Footer />
     </ThemeProvider>
   )
 }

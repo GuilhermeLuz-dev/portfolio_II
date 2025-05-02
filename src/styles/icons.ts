@@ -8,4 +8,9 @@ export const icons = {
   reactIcon: 'assets/icons/react.png',
   linkedinIcon: 'assets/icons/linkedin.png',
   typescriptIcon: 'assets/icons/typescript.png',
+  userIcon: 'assets/icons/user.png',
+  sendIcon: 'assets/icons/enviar.png',
+  emailIcon: 'assets/icons/email.png',
+  chatIcon: 'assets/icons/chat.png',
+  instagramIcon: 'assets/icons/instagram.png',
 }

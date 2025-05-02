@@ -7,7 +7,7 @@ import * as S from './styles'
 const Projects = () => (
   <S.SectionProjects>
     <S.ContainerProjects>
-      <Title color="pinkPorpleGradient" size="medium" weight="bold" center={true}>
+      <Title color="pinkPurpleGradient" size="medium" weight="bold" center={true}>
         Projetos
       </Title>
       <Caroussel />

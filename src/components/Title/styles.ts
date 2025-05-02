@@ -3,7 +3,7 @@ import styled from 'styled-components'
 type TitleStyledProps = {
   size?: 'small' | 'medium' | 'large'
   weight?: 'normal' | 'bold'
-  color?: 'pinkGradient' | 'blueGradient' | 'greenGradient' | 'pinkPorpleGradient'
+  color?: string
   center?: boolean
 }
 
@@ -11,14 +11,7 @@ export const TitleStyled = styled.h1<TitleStyledProps>`
   font-size: ${(props) =>
     props.size === 'small' ? '24px' : props.size === 'medium' ? '32px' : '40px'};
   font-weight: ${(props) => (props.weight === 'bold' ? '700' : '400')};
-  background: ${(props) =>
-    props.color === 'pinkGradient'
-      ? 'linear-gradient(90deg, #7E13F8  0%,#DC6EBE 100%)'
-      : props.color === 'blueGradient'
-        ? 'linear-gradient(90deg,rgb(1, 64, 105) 0%, #264DE4 100%)'
-        : props.color === 'greenGradient'
-          ? 'linear-gradient(90deg,rgb(1, 184, 101) 34.5%, #6BD1FF 100%)'
-          : 'linear-gradient(90deg, #D9059F 0%, #7E13F8 100%)'};
+  background: ${(props) => (props.color ? props.theme.colors[props.color] : '#0f0')};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: ${(props) => (props.center ? 'center' : 'left')};
