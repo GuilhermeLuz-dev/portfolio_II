@@ -40,4 +40,10 @@ export const ButtonContainer = styled.div`
 export const ButtonHero = styled(ButtonStyled)<Props>`
   width: 32.66%;
   background: ${(props) => props.theme.colors[props.background || 'blue']};
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 0 8px 3px #fff5;
+  }
 `

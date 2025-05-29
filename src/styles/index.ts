@@ -14,8 +14,16 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Montserrat", sans-serif;
   }
 
+  html{
+    scroll-behavior: smooth;
+  }
+
   body{
     background-color: #0c0c0c;
+  }
+
+  section{
+    scroll-margin-top: 61px;
   }
 `
 

@@ -6,8 +6,8 @@ type Props = {
 }
 
 export const AboutStyled = styled.section`
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 80px;
+  margin-bottom: 80px;
   border-bottom: 3px solid #333;
 `
 
@@ -32,7 +32,7 @@ export const P = styled.p`
 `
 
 export const StackAndSkillsContainer = styled.div`
-  padding: 24px;
+  padding: 40px 24px;
   border: 2px solid #333;
   border-radius: 5px;
 `

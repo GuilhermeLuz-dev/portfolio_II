@@ -1,11 +1,12 @@
+import { forwardRef } from 'react'
 import SoftSkillTag from '../../components/SoftSkillTag'
 import Title from '../../components/Title'
 import Icon from '../../components/Icon'
 
 import * as S from './styles'
 
-const About = () => (
-  <S.AboutStyled>
+const About = forwardRef<HTMLElement>((props, ref) => (
+  <S.AboutStyled ref={ref} {...props}>
     <Title color="greenGradient" size="medium" weight="bold" center>
       Sobre
     </Title>
@@ -49,5 +50,7 @@ const About = () => (
       </S.SkillsContainer>
     </S.AboutContainer>
   </S.AboutStyled>
-)
+))
+
+About.displayName = 'About'
 export default About

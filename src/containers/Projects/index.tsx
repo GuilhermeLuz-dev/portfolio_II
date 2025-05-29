@@ -1,11 +1,12 @@
+import { forwardRef } from 'react'
 import Title from '../../components/Title'
 import Caroussel from '../../components/Caroussel'
 import Filter from '../../components/Filter'
 import CardProject from '../../components/CardProject'
 import * as S from './styles'
 
-const Projects = () => (
-  <S.SectionProjects>
+const Projects = forwardRef<HTMLElement>((props, ref) => (
+  <S.SectionProjects ref={ref} {...props}>
     <S.ContainerProjects>
       <Title color="pinkPurpleGradient" size="medium" weight="bold" center={true}>
         Projetos
@@ -52,6 +53,8 @@ const Projects = () => (
       </S.CardsContainer>
     </S.ContainerProjects>
   </S.SectionProjects>
-)
+))
+
+Projects.displayName = 'Projects'
 
 export default Projects
