@@ -11,7 +11,9 @@ type CardProjectProps = {
 
 const CardProject = ({ title, description, image, techs }: CardProjectProps) => (
   <S.CardStyled>
-    <S.CardImage src={image} />
+    <S.ImageContainer>
+      <S.CardImage src={image} />
+    </S.ImageContainer>
     <S.InfosContainer>
       <Title color="pinkPurpleGradient" size="small" weight="bold">
         {title}
@@ -28,9 +30,9 @@ const CardProject = ({ title, description, image, techs }: CardProjectProps) => 
         </S.CardButton>
       </S.ButtonsContainer>
       <S.TechIconsContainer>
-        {techs.map((tech) => (
-          <Icon key={tech} name={tech} />
-        ))}
+        {techs.length > 0
+          ? techs.map((tech) => <Icon key={tech} name={tech} />)
+          : 'Sem tecnologias'}
       </S.TechIconsContainer>
     </S.InfosContainer>
   </S.CardStyled>

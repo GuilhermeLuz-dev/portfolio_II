@@ -14,12 +14,18 @@ export const CardStyled = styled.li`
 export const CardImage = styled.img`
   border-radius: 10px;
   width: 100%;
+  height: 100%;
   object-fit: cover;
 `
 
 export const InfosContainer = styled.div`
   padding: 16px 24px;
   color: #fff;
+`
+
+export const ImageContainer = styled.div`
+  width: 100%;
+  height: 200px;
 `
 
 export const Description = styled.p`

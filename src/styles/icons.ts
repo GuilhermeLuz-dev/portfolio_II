@@ -1,6 +1,6 @@
 export const icons = {
   githubIcon: 'assets/icons/github.png',
-  css3Icon: 'assets/icons/css.png',
+  cssIcon: 'assets/icons/css.png',
   downloadingIcon: 'assets/icons/downloading.png',
   globeIcon: 'assets/icons/globe.png',
   htmlIcon: 'assets/icons/html.png',
