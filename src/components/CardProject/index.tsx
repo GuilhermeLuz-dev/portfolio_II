@@ -19,6 +19,8 @@ const CardProject = ({ title, description, image, techs }: CardProjectProps) => 
         {title}
       </Title>
       <S.Description>{description}</S.Description>
+    </S.InfosContainer>
+    <S.ButtonsTechsContainer>
       <S.ButtonsContainer>
         <S.CardButton background="pinkGradient">
           <Icon name="githubIcon" size={16} />
@@ -34,7 +36,7 @@ const CardProject = ({ title, description, image, techs }: CardProjectProps) => 
           ? techs.map((tech) => <Icon key={tech} name={tech} />)
           : 'Sem tecnologias'}
       </S.TechIconsContainer>
-    </S.InfosContainer>
+    </S.ButtonsTechsContainer>
   </S.CardStyled>
 )
 

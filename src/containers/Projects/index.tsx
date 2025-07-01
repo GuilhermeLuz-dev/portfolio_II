@@ -21,7 +21,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
   useEffect(() => {
     const fetchProjects = async () => {
       let query = supabase.from('projects').select('*')
-      if (selectedFilter && selectedFilter !== 'Todos') {
+      if (selectedFilter && selectedFilter !== 'todos') {
         query = query.eq('category', selectedFilter)
       }
       const { data, error } = await query

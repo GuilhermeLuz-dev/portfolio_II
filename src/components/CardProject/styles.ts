@@ -7,6 +7,9 @@ type Props = {
 
 export const CardStyled = styled.li`
   width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
   background-color: #1e1e1e;
   border-radius: 10px;
 `
@@ -19,6 +22,8 @@ export const CardImage = styled.img`
 `
 
 export const InfosContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 16px 24px;
   color: #fff;
 `
@@ -45,6 +50,12 @@ export const CardButton = styled(ButtonStyled)<Props>`
   font-size: 10px;
   padding: 6px;
   background: ${(props) => (props.background ? props.theme.colors[props.background] : '#1E1E1E')};
+`
+export const ButtonsTechsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  margin-top: auto;
 `
 
 export const TechIconsContainer = styled.div`

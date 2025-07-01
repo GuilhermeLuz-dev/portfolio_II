@@ -6,9 +6,9 @@ type FilterProps = {
 
 const Filter = ({ value, onChange }: FilterProps) => (
   <FilterStyled value={value} onChange={(e) => onChange(e.target.value)}>
-    <option value="Todos">Todos</option>
-    <option value="LandingPage">LandinPage</option>
-    <option value="ecommerce">ecommerce</option>
+    <option value="todos">Todos</option>
+    <option value="landingpage">LandinPage</option>
+    <option value="website">Website</option>
     <option value="jogos">jogos</option>
   </FilterStyled>
 )
