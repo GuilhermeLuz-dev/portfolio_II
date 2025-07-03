@@ -9,7 +9,7 @@ const navItem = [
   { id: 'heroRef', label: 'Início' },
   { id: 'projectsRef', label: 'Projetos' },
   { id: 'aboutRef', label: 'Sobre' },
-  { id: 'contactsRef', label: 'Contatos' },
+  { id: 'contactsRef', label: 'Contato' },
 ]
 
 const Nav = (props: NavProps) => {

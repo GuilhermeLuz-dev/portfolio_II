@@ -38,6 +38,7 @@ export const StackAndSkillsContainer = styled.div`
   padding: 40px 24px;
   border: 2px solid #333;
   border-radius: 5px;
+  height: 100%;
 `
 
 export const SkillsContent = styled.div<Props>`

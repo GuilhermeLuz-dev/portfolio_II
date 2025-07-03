@@ -13,4 +13,11 @@ export const icons = {
   emailIcon: 'assets/icons/email.png',
   chatIcon: 'assets/icons/chat.png',
   instagramIcon: 'assets/icons/instagram.png',
+  bootstrapIcon: 'assets/icons/bootstrap.png',
+  firebaseIcon: 'assets/icons/firebase.png',
+  gitIcon: 'assets/icons/git.png',
+  nodejsIcon: 'assets/icons/nodejs.png',
+  sassIcon: 'assets/icons/sass.png',
+  sqlIcon: 'assets/icons/sql.png',
+  supabaseIcon: 'assets/icons/supabase.png',
 }

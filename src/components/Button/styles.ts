@@ -11,4 +11,10 @@ export const ButtonStyled = styled.a`
   align-items: center;
   justify-content: center;
   gap: 8px;
+  transition:
+    all 0.3s,
+    box-shadow 0.3s;
+  &:hover {
+    transform: translateY(-4px);
+  }
 `

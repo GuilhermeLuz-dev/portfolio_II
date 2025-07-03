@@ -42,7 +42,7 @@ const CardProject = ({
       </S.ButtonsContainer>
       <S.TechIconsContainer>
         {techs.length > 0
-          ? techs.map((tech) => <Icon key={tech} name={tech} />)
+          ? techs.map((tech) => <Icon key={tech} name={tech} size={18} />)
           : 'Sem tecnologias'}
       </S.TechIconsContainer>
     </S.ButtonsTechsContainer>
