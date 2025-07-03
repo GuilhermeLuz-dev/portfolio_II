@@ -21,7 +21,7 @@ export const useSectionObserver = (sectionRefs: SectionRefs) => {
         }
       },
       {
-        threshold: 0.4,
+        threshold: 0.3,
       }
     )
 

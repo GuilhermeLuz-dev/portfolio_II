@@ -19,4 +19,7 @@ export const CardsContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-top: 24px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `

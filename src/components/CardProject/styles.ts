@@ -12,6 +12,11 @@ export const CardStyled = styled.li`
   flex-direction: column;
   background-color: #1e1e1e;
   border-radius: 10px;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #363636;
+    transform: scale(1.02);
+  }
 `
 
 export const CardImage = styled.img`

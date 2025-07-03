@@ -36,6 +36,10 @@ export const ButtonContainer = styled.div`
   justify-content: space-between;
   gap: 1%;
   margin-top: 64px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px;
+  }
 `
 export const ButtonHero = styled(ButtonStyled)<Props>`
   width: 32.66%;
@@ -45,5 +49,8 @@ export const ButtonHero = styled(ButtonStyled)<Props>`
     box-shadow 0.3s;
   &:hover {
     box-shadow: 0 0 8px 3px #fff5;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `

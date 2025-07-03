@@ -12,6 +12,8 @@ type Project = {
   description: string
   image: string
   techs: string[]
+  linkRepository?: string
+  linkSite?: string
 }
 
 const Projects = forwardRef<HTMLElement>((props, ref) => {
@@ -54,6 +56,8 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
               description={project.description || 'Sem descrição'}
               image={project.image || ''}
               techs={project.techs || []}
+              linkRepository={project.linkRepository || ''}
+              linkSite={project.linkSite || ''}
             />
           ))}
         </S.CardsContainer>

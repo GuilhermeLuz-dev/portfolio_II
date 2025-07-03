@@ -17,6 +17,9 @@ export const AboutContainer = styled(Container)`
   gap: 8px;
   margin-top: 48px;
   margin-bottom: 48px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 export const SkillsContainer = styled.div`
   display: flex;

@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper/modules'
+import supabase from '../../services/supabase'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -7,102 +9,85 @@ import Icon from '../Icon'
 
 import * as S from './styles'
 
-const Caroussel = () => (
-  <Swiper
-    modules={[Navigation, Autoplay]}
-    navigation
-    autoplay={{ delay: 3000, disableOnInteraction: false }}
-    loop={true}
-    slidesPerView={1}
-  >
-    <SwiperSlide>
-      <S.CarrousselContainer>
-        <S.ImageContainer>
-          <S.CarrousselImage src="/assets/images/imageForHero.jpg" alt="Imagem do projeto" />
-        </S.ImageContainer>
-        <S.CarrousselInfo>
-          <S.TitleCarrousel size="small" weight="bold" color="pinkPurpleGradient" center={false}>
-            Titulo do projeto
-          </S.TitleCarrousel>
-          <S.P>Descrição do projeto</S.P>
-          <S.ButtonContainer>
-            <S.ButtonProject background="pinkColor">
-              <Icon name="githubIcon" size={16} />
-              Build
-            </S.ButtonProject>
-            <S.ButtonProject background="purpleColor">
-              <Icon name="globeIcon" size={16} />
-              Repositorio
-            </S.ButtonProject>
-          </S.ButtonContainer>
+type Project = {
+  id: number
+  title: string
+  description: string
+  image: string
+  techs: string[]
+  linkRepository: string
+  linkSite: string
+}
 
-          <S.TechIconsContainer>
-            <Icon name="css3Icon" size={24} />
-            <Icon name="htmlIcon" size={24} />
-            <Icon name="jsIcon" size={24} />
-          </S.TechIconsContainer>
-        </S.CarrousselInfo>
-      </S.CarrousselContainer>
-    </SwiperSlide>
-    <SwiperSlide>
-      <S.CarrousselContainer>
-        <S.ImageContainer>
-          <S.CarrousselImage src="/assets/images/456498.jpg" alt="Imagem do projeto" />
-        </S.ImageContainer>
-        <S.CarrousselInfo>
-          <S.TitleCarrousel size="small" weight="bold" color="pinkPurpleGradient" center={false}>
-            Titulo do projeto
-          </S.TitleCarrousel>
-          <S.P>Descrição do projeto</S.P>
-          <S.ButtonContainer>
-            <S.ButtonProject background="pinkColor">
-              <Icon name="githubIcon" size={16} />
-              Build
-            </S.ButtonProject>
-            <S.ButtonProject background="purpleColor">
-              <Icon name="globeIcon" size={16} />
-              Repositorio
-            </S.ButtonProject>
-          </S.ButtonContainer>
+const Caroussel = () => {
+  const [projects, setProjects] = useState<Project[]>([])
 
-          <S.TechIconsContainer>
-            <Icon name="css3Icon" size={24} />
-            <Icon name="htmlIcon" size={24} />
-            <Icon name="jsIcon" size={24} />
-          </S.TechIconsContainer>
-        </S.CarrousselInfo>
-      </S.CarrousselContainer>
-    </SwiperSlide>
-    <SwiperSlide>
-      <S.CarrousselContainer>
-        <S.ImageContainer>
-          <S.CarrousselImage src="/assets/images/imageForHero.jpg" alt="Imagem do projeto" />
-        </S.ImageContainer>
-        <S.CarrousselInfo>
-          <S.TitleCarrousel size="small" weight="bold" color="pinkPurpleGradient" center={false}>
-            Titulo do projeto
-          </S.TitleCarrousel>
-          <S.P>Descrição do projeto</S.P>
-          <S.ButtonContainer>
-            <S.ButtonProject background="pinkColor">
-              <Icon name="githubIcon" size={16} />
-              Build
-            </S.ButtonProject>
-            <S.ButtonProject background="purpleColor">
-              <Icon name="globeIcon" size={16} />
-              Repositorio
-            </S.ButtonProject>
-          </S.ButtonContainer>
+  useEffect(() => {
+    const fetchProjects = async () => {
+      let query = supabase.from('projects').select('*')
 
-          <S.TechIconsContainer>
-            <Icon name="css3Icon" size={24} />
-            <Icon name="htmlIcon" size={24} />
-            <Icon name="jsIcon" size={24} />
-          </S.TechIconsContainer>
-        </S.CarrousselInfo>
-      </S.CarrousselContainer>
-    </SwiperSlide>
-  </Swiper>
-)
+      query = query.eq('isMain', true)
+
+      const { data, error } = await query
+      if (error) {
+        console.log(error)
+        return
+      }
+      setProjects(data)
+    }
+    fetchProjects()
+  }, [])
+  return (
+    <Swiper
+      modules={[Navigation, Autoplay]}
+      navigation
+      autoplay={{ delay: 5000, disableOnInteraction: false }}
+      loop={true}
+      slidesPerView={1}
+    >
+      {projects.map((project, key) => (
+        <SwiperSlide key={key}>
+          <S.CarrousselContainer>
+            <S.ImageContainer>
+              <S.CarrousselImage src={project.image} alt="Imagem do projeto" />
+            </S.ImageContainer>
+            <S.CarrousselInfo>
+              <S.TitleCarrousel
+                size="small"
+                weight="bold"
+                color="pinkPurpleGradient"
+                center={false}
+              >
+                {project.title}
+              </S.TitleCarrousel>
+              <S.P>{project.description}</S.P>
+              <S.ButtonContainer>
+                <S.ButtonProject background="pinkColor" href={project.linkSite} target="_blank">
+                  <Icon name="githubIcon" size={16} />
+                  Build
+                </S.ButtonProject>
+
+                <S.ButtonProject
+                  background="purpleColor"
+                  href={project.linkRepository}
+                  target="_blank"
+                >
+                  <Icon name="globeIcon" size={16} />
+                  Repositorio
+                </S.ButtonProject>
+              </S.ButtonContainer>
+
+              <S.TechIconsContainer>
+                {project.techs.map((tech, index) => (
+                  <Icon key={index} name={tech} size={24} />
+                ))}
+              </S.TechIconsContainer>
+            </S.CarrousselInfo>
+          </S.CarrousselContainer>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  )
+}
 
 export default Caroussel

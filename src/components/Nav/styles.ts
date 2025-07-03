@@ -6,7 +6,7 @@ type NavProps = {
 
 export const Nav = styled.nav<NavProps>`
   display: flex;
-  gap: 30px;
+  gap: 10px;
   overflow: hidden;
 
   @media (max-width: 768px) {

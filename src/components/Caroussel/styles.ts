@@ -15,6 +15,10 @@ export const CarrousselContainer = styled.div`
   margin-top: 48px;
   background-color: #1e1e1e;
   border-radius: 10px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    height: 550px;
+  }
 `
 export const ImageContainer = styled.div`
   position: relative;
@@ -26,8 +30,21 @@ export const ImageContainer = styled.div`
     background: linear-gradient(90deg, rgba(30, 30, 30, 0) 0%, rgb(30, 30, 30) 100%);
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     z-index: 1;
+  }
+  @media (max-width: 768px) {
+    &::before {
+      content: '';
+      position: absolute;
+      top: auto;
+      right: auto;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 40%;
+      background: linear-gradient(0deg, rgb(30, 30, 30) 10%, rgba(30, 30, 30, 0) 100%);
+      z-index: 1;
+    }
   }
 `
 

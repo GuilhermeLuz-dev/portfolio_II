@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ButtonStyled = styled.button`
+export const ButtonStyled = styled.a`
   padding: 8px;
   color: #fff;
   font-weight: bold;
